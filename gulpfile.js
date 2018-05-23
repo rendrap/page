@@ -75,7 +75,7 @@ gulp.task('jekyll-build', function (done) {
         .on('close', done);
 });
 
-gulp.task('gh-pages', function (done) {
+gulp.task('gh-pages', ['pug'], function (done) {
     browserSync.notify(messages.jekyllBuild);
     return cp.spawn( jekyll , ['build', '--config', '_config-ghpages.yml'], {stdio: 'inherit'})
         .on('close', done);
