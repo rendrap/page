@@ -1,0 +1,18 @@
+name: Page site
+title: Page site
+markdown: kramdown
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ parse_block_html: true
+ # syntax_highlighter: rouge
+repository: 'rendrap/page'
+permalink: pretty
+plugins:
+  - jekyll-sitemap
+  # - jekyll-paginate
+# keep_files: [images]
+baseurl: "/"
+exclude: ["node_modules",".git","README.md", "favicon.ico", "_source_block/","gulpfile.js", "package.json", "package-lock.json", ".jekyll-metadata", "source-code","fonts","_pug_includes","_site/assets/javascript/anchor-js/","assets/scss-temp/"]
+keep_files: ["assets/images"]

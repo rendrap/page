@@ -1,0 +1,25 @@
+- name: Home
+  path:
+- name: Elements
+  path: javascript:;
+  children:
+    - name: Colors
+      path: colors/
+    - name: Icons
+      path: icons/
+    - name: Buttons
+      path: buttons/
+    - name: Modals
+      path: modals/
+    - name: Progress &amp; Activity
+      path: progress_bars/
+    - name: Accordians
+      path: accordians/
+    - name: Tabs
+      path: tabs/
+- name: Pricing
+  path: pricing/
+- name: Portfolio
+  path: portfolio/
+- name: Kontakt
+  path: kontakt/
