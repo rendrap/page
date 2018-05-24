@@ -1,3 +1,4 @@
+nav:
 - name: Home
   path:
 - name: Elements
@@ -23,3 +24,14 @@
   path: portfolio/
 - name: Kontakt
   path: kontakt/
+
+top-links:
+- name: English
+  path: '#'
+- name: Blog
+  path: '#'
+- name: Privacy Policy
+  path: '#'
+
+cell-number: +65 345 345 5555
+
