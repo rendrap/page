@@ -34,6 +34,7 @@ gulp.task('less', function () {
           errorHandler: notify.onError()
       }))
     .pipe(gulp.dest(config.pages+'/css/'))
+    .pipe(gulp.dest('./_site/pages/css/'))
     .pipe(browserSync.reload({stream:true}));
 });
 
@@ -51,6 +52,11 @@ gulp.task('pug', function() {
       .pipe(browserSync.stream());
 });
 
+gulp.task('js', function() {
+    return gulp.src(["assets/js/**/*.js"])
+        .pipe(gulp.dest("./_site/assets/js"))
+        .pipe(browserSync.reload({stream:true}));
+});
 
 gulp.task('css-min', function(){
   return gulp.src( [config.build+'./assets/css/*.css' , config.build+'./pages/css/*.css'])
@@ -94,7 +100,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 gulp.task('watch', function () {
     gulp.watch(config.pages+'/less/*.less', ['less']);
     gulp.watch(['./_pug_includes/*.pug'], ['pug']);
-    // gulp.watch('assets/js/*.js', ['js']);
+    gulp.watch('assets/js/*.js', ['js']);
     gulp.watch(['*.md','*/*.md'], ['jekyll-rebuild']);
     gulp.watch(['*.yml','_data/*.yml'], ['jekyll-rebuild']);
     gulp.watch(['./*.html', '_layouts/*.html', '_includes/*.html', '_includes/*.md',
