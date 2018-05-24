@@ -1,0 +1,8 @@
+image : assets/images/logo_black.png
+
+icon-links:
+- {icon: fa-facebook, url: '#'}
+- {icon: fa-twitter, url: '#'}
+- {icon: fa-dribbble, url: '#'}
+- {icon: fa-rss, url: '#'}
+- {icon: fa-linkedin, url: '#'}

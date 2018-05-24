@@ -3,14 +3,10 @@
 <section class="p-b-70 p-t-55">
   <div class="container">
     <div class="row">
-      <div class="col-md-7"><img alt="" src="assets/images/logo_black.png"/></div>
+      <div class="col-md-7"><img alt="" src="{{ site.data.footer.image }}"/></div>
       <div class="col-md-5">
-        <ul class="no-style fs-12 no-padding pull-right xs-pull-left xs-m-t-20">
-          <li class="inline no-padding"><a class="text-black p-l-30 fs-16 xs-no-padding" href="#"><i class="fa fa-facebook"></i></a></li>
-          <li class="inline no-padding"><a class="text-black p-l-30 fs-16" href="#"><i class="fa fa-twitter"></i></a></li>
-          <li class="inline no-padding"><a class="text-black p-l-30 fs-16" href="#"><i class="fa fa-dribbble"></i></a></li>
-          <li class="inline no-padding"><a class="text-black p-l-30 fs-16" href="#"><i class="fa fa-rss"></i></a></li>
-          <li class="inline no-padding"><a class="text-black p-l-30 fs-16" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <ul class="no-style fs-12 no-padding pull-right xs-pull-left xs-m-t-20">{% for item in site.data.footer.icon-links %}
+          <li class="inline no-padding">{% if forloop.first %}<a class="text-black p-l-30 fs-16 xs-no-padding" href="{{ item.url }}"><i class="fa {{ item.icon }}"></i></a>{% else %}<a class="text-black p-l-30 fs-16" href="{{ item.url }}"><i class="fa {{ item.icon }}"></i></a>{% endif %}</li>{% endfor %}
         </ul>
       </div>
     </div>

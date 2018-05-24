@@ -3,24 +3,20 @@ section.p-b-70.p-t-55
   .container
     .row
       .col-md-7
-        img(alt='' src='assets/images/logo_black.png')
+        img(alt='' src='{{ site.data.footer.image }}')
       .col-md-5
         ul.no-style.fs-12.no-padding.pull-right.xs-pull-left.xs-m-t-20
+          |{% for item in site.data.footer.icon-links %}
           li.inline.no-padding
-            a.text-black.p-l-30.fs-16.xs-no-padding(href='#')
-              i.fa.fa-facebook
-          li.inline.no-padding
-            a.text-black.p-l-30.fs-16(href='#')
-              i.fa.fa-twitter
-          li.inline.no-padding
-            a.text-black.p-l-30.fs-16(href='#')
-              i.fa.fa-dribbble
-          li.inline.no-padding
-            a.text-black.p-l-30.fs-16(href='#')
-              i.fa.fa-rss
-          li.inline.no-padding
-            a.text-black.p-l-30.fs-16(href='#')
-              i.fa.fa-linkedin
+            |{% if forloop.first %}
+            a(class='text-black p-l-30 fs-16 xs-no-padding' href='{{ item.url }}')
+              i(class='fa {{ item.icon }}')
+            |{% else %}
+            a(class='text-black p-l-30 fs-16' href='{{ item.url }}')
+              i(class='fa {{ item.icon }}')
+            |{% endif %}
+          |{% endfor %}
+
     .row.m-t-30
       .col-sm-3.col-xs-12.xs-m-b-20
         p.fs-14
