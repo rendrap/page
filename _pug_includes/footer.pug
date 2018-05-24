@@ -27,39 +27,23 @@ section.p-b-70.p-t-55
           |  Canada.
       .col-sm-3.col-xs-6.xs-m-b-20
         ul.no-style.no-padding
+          |{% for item in site.data.footer.left-links %}
           li.m-b-5.no-padding
-            a.link.text-black(href='#') Pages Blogs
-          li.m-b-5.no-padding
-            a.link.text-black(href='#') Go Pro
-          li.m-b-5.no-padding
-            a.link.text-black(href='#') Community Meetups
-          li.m-b-5.no-padding
-            a.link.text-black(href='#') Become and Affiliate
-          li.m-b-5.no-padding
-            a.link.text-black(href='#') Forums
-          li.m-b-5.no-padding
-            a.link.text-black(href='#') Help and Support
-          li.m-b-5.no-padding
-            a.link.text-black(href='#') News feed
+            a.link.text-black(href='{{ item.url }}') {{ item.name }}
+          |{% endfor %}
       .col-sm-3.col-xs-6.xs-m-b-20
         ul.no-style.no-padding
+          |{% for item in site.data.footer.right-links %}
           li.m-b-5.no-padding
-            a.link.text-black(href='#')  Help Center
-          li.m-b-5.no-padding
-            a.link.text-black(href='#') Pages License Details
-          li.m-b-5.no-padding
-            a.link.text-black(href='#') Contact us
-          li.m-b-5.no-padding
-            a.link.text-black(href='#') Meet the team
-          li.m-b-5.no-padding
-            a.link.text-black(href='#') Terms &amp; Conditions
+            a.link.text-black(href='{{ item.url }}') {{ item.name }}
+          |{% endfor %}
 section.p-t-10.p-b-10.bg-master-darkest
   .container
     .row
       .col-sm-7
         p.fs-11.no-margin.font-arial.text-white.small-text
           span.hint-text Exclusive only at
-          |  Envato Marketplace,Themeforest
+          |  Envato Marketplace,Themeforest&nbsp;
           span.hint-text See
           |  Standard licenses &amp; Extended licenses
       .col-sm-5.text-right

@@ -15,23 +15,13 @@
         <p class="fs-14">23/4 ways Street. Station 322<br/> Ottawa Ontario K1AOB1<br/> Canada.</p>
       </div>
       <div class="col-sm-3 col-xs-6 xs-m-b-20">
-        <ul class="no-style no-padding">
-          <li class="m-b-5 no-padding"><a class="link text-black" href="#">Pages Blogs</a></li>
-          <li class="m-b-5 no-padding"><a class="link text-black" href="#">Go Pro</a></li>
-          <li class="m-b-5 no-padding"><a class="link text-black" href="#">Community Meetups</a></li>
-          <li class="m-b-5 no-padding"><a class="link text-black" href="#">Become and Affiliate</a></li>
-          <li class="m-b-5 no-padding"><a class="link text-black" href="#">Forums</a></li>
-          <li class="m-b-5 no-padding"><a class="link text-black" href="#">Help and Support</a></li>
-          <li class="m-b-5 no-padding"><a class="link text-black" href="#">News feed</a></li>
+        <ul class="no-style no-padding">{% for item in site.data.footer.left-links %}
+          <li class="m-b-5 no-padding"><a class="link text-black" href="{{ item.url }}">{{ item.name }}</a></li>{% endfor %}
         </ul>
       </div>
       <div class="col-sm-3 col-xs-6 xs-m-b-20">
-        <ul class="no-style no-padding">
-          <li class="m-b-5 no-padding"><a class="link text-black" href="#"> Help Center</a></li>
-          <li class="m-b-5 no-padding"><a class="link text-black" href="#">Pages License Details</a></li>
-          <li class="m-b-5 no-padding"><a class="link text-black" href="#">Contact us</a></li>
-          <li class="m-b-5 no-padding"><a class="link text-black" href="#">Meet the team</a></li>
-          <li class="m-b-5 no-padding"><a class="link text-black" href="#">Terms &amp; Conditions</a></li>
+        <ul class="no-style no-padding">{% for item in site.data.footer.right-links %}
+          <li class="m-b-5 no-padding"><a class="link text-black" href="{{ item.url }}">{{ item.name }}</a></li>{% endfor %}
         </ul>
       </div>
     </div>
@@ -41,7 +31,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-7">
-        <p class="fs-11 no-margin font-arial text-white small-text"><span class="hint-text">Exclusive only at</span> Envato Marketplace,Themeforest<span class="hint-text">See</span> Standard licenses &amp; Extended licenses</p>
+        <p class="fs-11 no-margin font-arial text-white small-text"><span class="hint-text">Exclusive only at</span> Envato Marketplace,Themeforest&nbsp;<span class="hint-text">See</span> Standard licenses &amp; Extended licenses</p>
       </div>
       <div class="col-sm-5 text-right">
         <p class="fs-11 no-margin font-arial text-white small-text">Copyright &copy; 2014 REVOX. All Rights Reserved.</p>

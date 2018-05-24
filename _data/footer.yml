@@ -6,3 +6,19 @@ icon-links:
 - {icon: fa-dribbble, url: '#'}
 - {icon: fa-rss, url: '#'}
 - {icon: fa-linkedin, url: '#'}
+
+left-links:
+- {name: Pages Blogs, url: '#'}
+- {name: Go Pro, url: '#'}
+- {name: Community Meetups, url: '#'}
+- {name: Become and Affiliate, url: '#'}
+- {name: Forums, url: '#'}
+- {name: Help and Support, url: '#'}
+- {name: News feed, url: '#'}
+
+right-links:
+- {name: Help Center, url: '#'}
+- {name: Pages License Details, url: '#'}
+- {name: Contact us, url: '#'}
+- {name: Meet the team, url: '#'}
+- {name: Terms &amp; Conditions, url: '#'}
