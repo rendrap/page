@@ -2,15 +2,8 @@
   .row-xs-height
     .col-xs-height.col-middle
       .error-container.text-center
-        h1.error-number 404
-        h2.semi-bold Sorry but we couldnt find this page
+        h1.error-number {{ site.data.404.content.error-code }}
+        h2.semi-bold {{ site.data.404.content.text }}
         p
-          | This page you are looking for does not exsist
-          a(href='#')  Report this?
-        .error-container-innner.text-center
-          form
-            .form-group.form-group-default.input-group.transparent.text-left
-              label.control-label Search
-              input.form-control(placeholder='Try searching the missing page' type='email')
-              span.input-group-addon
-                i.pg-search
+          | {{ site.data.404.content.sub-text }}
+          a(href='{{ site.data.404.content.link-url }}')  {{ site.data.404.content.link-text }}

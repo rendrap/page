@@ -1,0 +1,14 @@
+content:
+  error-code: 404
+  text: Sorry but we couldnt find this page
+  sub-text: This page you are looking for does not exsist
+  link-text: Report this?
+  link-url: '#'
+
+footer:
+  text1: Create a pages account. If you have a facebook account, log into it for this process.
+  text2: Sign in with
+  link1-text: Facebook
+  link1-url: '#'
+  link2-text: Google
+  link2-url: '#'
