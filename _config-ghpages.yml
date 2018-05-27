@@ -14,5 +14,9 @@ plugins:
   # - jekyll-paginate
 # keep_files: [images]
 baseurl: "/page"
-exclude: ["node_modules","README.md", "favicon.ico", "_source_block/","gulpfile.js", "package.json", "package-lock.json", ".jekyll-metadata", "source-code","fonts","_pug_includes","_site/assets/javascript/anchor-js/","assets/scss-temp/"]
+exclude: ["node_modules","README.md","pages/less", "favicon.ico", "_source_block/","gulpfile.js", "package.json", "package-lock.json", ".jekyll-metadata", "source-code","fonts","_pug_includes","_site/assets/javascript/anchor-js/","assets/scss-temp/"]
 keep_files: ["assets/images"]
+
+collections:
+  sections:
+    output: false

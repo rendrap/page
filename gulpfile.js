@@ -40,7 +40,7 @@ gulp.task('less', function () {
 
 // compile pug
 gulp.task('pug', function() {
-  return gulp.src("./_pug_includes/*.pug")
+  return gulp.src("./_pug_includes/**/*.pug")
       .pipe(plumber({
           errorHandler: notify.onError()
       }))
@@ -87,11 +87,6 @@ gulp.task('gh-pages', ['pug'], function (done) {
         .on('close', done);
 });
 
-// gulp.task('jekyll-build', () => {
-//     return require('child_process').exec('bundle exec jekyll build');
-// });
-
-
 // Rebuild Jekyll & do page reload
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     browserSync.reload();
@@ -99,37 +94,12 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 
 gulp.task('watch', function () {
     gulp.watch(config.pages+'/less/*.less', ['less']);
-    gulp.watch(['./_pug_includes/*.pug'], ['pug']);
+    gulp.watch('./_pug_includes/**/*.pug', ['pug']);
     gulp.watch('assets/js/*.js', ['js']);
-    gulp.watch(['*.md','*/*.md'], ['jekyll-rebuild']);
+    gulp.watch(['*.md','_sections/**/*.md'], ['jekyll-rebuild']);
     gulp.watch(['*.yml','_data/*.yml'], ['jekyll-rebuild']);
     gulp.watch(['./*.html', '_layouts/*.html', '_includes/*.html', '_includes/*.md',
     '_posts/*'], ['jekyll-rebuild']);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
-
-
-
-
-
-
-
-
-
-//-----------------------------------------------
-// var clean        = require('gulp-clean');
-// gulp.task('build',['less','copy'],function() {
-//  gulp.run('css-min');
-
-// });
-
-// gulp.task('clean', function(){
-// 	return gulp.src( config.build+'' , {read: false})
-// 		.pipe(clean());
-// });
-
-// gulp.task('copy', ['clean'],function () {
-// 	return gulp.src(['./**/*','!**/node_modules/**','!.gitgnore','!package.json','!Gruntfile.js','!gulpfile.js'])
-// 	.pipe(gulp.dest(config.build+''));
-// });
