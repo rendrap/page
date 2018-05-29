@@ -1,6 +1,6 @@
 nav:
 - name: Home
-  path:
+  path: /
 - name: Elements
   path: javascript:;
   children:
