@@ -3,7 +3,7 @@ section.p-b-70.p-t-55
   .container
     .row
       .col-md-7
-        img(alt='' src='{{ site.data.footer.image }}')
+        img(alt='' src='{{ site.data.footer.image | relative_url }}')
       .col-md-5
         ul.no-style.fs-12.no-padding.pull-right.xs-pull-left.xs-m-t-20
           |{% for item in site.data.footer.icon-links %}

@@ -3,7 +3,8 @@
  * Render maps using Google Maps JS API
  * For DEMO purposes only. Extract what you need.
  * ============================================================ */
-(function($) {
+$(document).ready(function() {
+// (function($) {
 
     'use strict';
 
@@ -135,7 +136,7 @@
             }]
         };
 
-        // Get the HTML DOM element that will contain your map 
+        // Get the HTML DOM element that will contain your map
         // We are using a div with id="map" seen below in the <body>
         var mapElement = document.getElementById('google-map');
 
@@ -143,4 +144,5 @@
         map = new google.maps.Map(mapElement, mapOptions);
     }
 
-})(window.jQuery);
+});
+// })(window.jQuery);

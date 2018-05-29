@@ -1,0 +1,88 @@
+.m-t-60
+  section.container.container-fixed-lg.p-t-65.p-b-100.sm-p-b-30.sm-m-b-30
+    .row
+      .col-md-6
+        h2 How can we assist you?
+        .p-r-40.sm-p-r-0
+          p
+            | Despite the UI, We thought of the User experience, With attached From Layouts you can simply categories Important fields and prioritize them.
+          br
+          br
+          #contact-panel.panel
+            p.semi-bold.no-margin Fill up this form to contact us if you have any futher questions
+            form#contact-form.m-t-15(role='form' autocomplete='off' action='_lib/mail.php' method='post')
+              .row
+                .col-sm-6
+                  .form-group.form-group-default.required
+                    label.control-label First name
+                    input.form-control(type='text' name='name' required='')
+                .col-sm-6
+                  .form-group.form-group-default
+                    label.control-label Last name
+                    input.form-control(type='text' name='last-name' required='')
+              .form-group.form-group-default
+                label.control-label Email
+                input.form-control(type='email' name='email' placeholder='This can be changed later' required='')
+              .form-group.form-group-default
+                label.control-label Message
+                textarea.form-control(name='message' placeholder='Type the message you wish to send' style='height:100px' required='')
+              .sm-p-t-10.clearfix
+                p.pull-left.small.hint-text.m-t-5.font-arial I hereby certify that the information above is true and accurate.
+                button.btn.btn-primary.font-montserrat.all-caps.fs-12.pull-right.xs-pull-left Submit
+              .clearfix
+      .col-md-6
+        .visible-xs.visible-sm.b-b.b-grey-light.m-t-35.m-b-30
+        .p-l-40.sm-p-l-0.sm-p-t-10
+          h3
+            | Showcase and guide users with a
+            br
+            | better User Interface &amp; Experience.
+          p
+            | Our motivation &quot;Perfection simplified&quot; helps to craft meaningful experiences for the people around us,This mission inspires us to jump out of bed each day and guides every aspect of what we do.
+          br
+          .row
+            .col-sm-6
+              h5.block-title.hint-text.m-b-0 california
+              address.m-t-10
+                | Stanford co.
+                br
+                |  54 E Pear St
+                br
+                |  Oklahoma city OK 73102
+              br
+              p.hint-text.no-margin
+                span.fs-12.font-montserrat.bold.all-caps.p-r-10 Tel
+                span.fs-14 (877) 412-7766
+              p.hint-text
+                span.fs-12.font-montserrat.bold.all-caps.p-r-10 Fax
+                span.fs-14 (877) 412-7766
+            .col-sm-6
+              h5.block-title.hint-text.m-b-0 canada
+              address.m-t-10
+                | Station 322
+                br
+                |  Ottawa Ontario K1AOB1
+                br
+                |  Canada.
+              br
+              p.hint-text.no-margin
+                span.fs-12.font-montserrat.bold.all-caps.p-r-10 Tel
+                span.fs-14 (877) 412-7766
+              p.hint-text
+                span.fs-12.font-montserrat.bold.all-caps.p-r-10 Fax
+                span.fs-14 (877) 412-7766
+          br
+          h5.block-title.hint-text.m-b-0 pages Public Inquiries &amp; Communications
+          br
+          .row
+            .col-sm-6
+              p.fs-12.font-montserrat.bold.all-caps.no-margin.hint-text Hotline
+              p.hint-text.no-margin.fs-14 (877) 412-7766
+            .col-sm-6
+              p.fs-12.font-montserrat.bold.all-caps.no-margin.hint-text Email
+              p.hint-text.no-margin.fs-14 support@revox.io
+  section.container-fluid.no-padding.no-overflow
+    // Map
+    #google-map.full-width.demo-map.gradient-overlay.no-overflow
+  // END CONTACT SECION
+

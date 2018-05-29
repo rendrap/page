@@ -3,7 +3,7 @@ nav.header.md-header.light-solid(data-pages='header')
   .container.relative
     .pull-left
       .header-inner
-        img.logo(src='assets/images/logo_black.png' width='152' height='21' data-src-retina='assets/images/logo_black_2x.png' alt='logo')
+        img.logo(src="{{ '/assets/images/logo_black.png' | relative_url }}" width='152' height='21' data-src-retina="{{ '/assets/images/logo_black_2x.png' | relative_url }}" alt='logo')
     // BEGIN HEADER TOGGLE FOR MOBILE & TABLET
     .pull-right
       .header-inner

@@ -10,4 +10,11 @@
 <!-- END PAGES LIB -->
 <!-- BEGIN YOUR CUSTOM JS -->
 <script type="text/javascript" src="{{ "assets/js/custom.js" | relative_url }}"></script>
+{% if page.title == 'contact' %}
+<script type="text/javascript" src="{{ "assets/js/contact.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{ "assets/js/google_map.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{ "assets/plugins/jquery-validation/js/jquery.validate.min.js" | relative_url }}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+{% endif %}
+
 <!-- END PAGES LIB -->

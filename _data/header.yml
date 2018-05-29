@@ -18,12 +18,12 @@ nav:
       path: accordians/
     - name: Tabs
       path: tabs/
-- name: Pricing
-  path: pricing/
+- name: Content
+  path: content/
 - name: Portfolio
   path: portfolio/
-- name: Kontakt
-  path: kontakt/
+- name: Contact
+  path: contact/
 
 top-links:
 - name: English
@@ -34,4 +34,3 @@ top-links:
   path: '#'
 
 cell-number: +65 345 345 5555
-
