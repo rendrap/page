@@ -33,12 +33,12 @@
           <nav class="horizontal">
             <div class="container">
               <ul>{% for child in item.children %}
-                <li><a href="{{ site.baseurl }}{{ child.path }}" target="_blank">{{ child.name }}</a></li>{% endfor %}
+                <li><a href="{{ child.path | relative_url }}" target="_blank">{{ child.name }}</a></li>{% endfor %}
               </ul>
             </div>
           </nav>
         </li>{% else %}
-        <li><a class="{{active_class}}" href="{{ site.baseurl }}{{ item.path }}">{{ item.name }}</a></li>{% endif %}
+        <li><a class="{{active_class}}" href="{{ item.path | relative_url }}">{{ item.name }}</a></li>{% endif %}
         {% endfor %}
       </ul><a class="btn btn-sm btn-bordered btn-black block-title fs-12 hidden-sm hidden-xs" href="#" data-text="Sign Up">Sign Up</a>
     </div>
