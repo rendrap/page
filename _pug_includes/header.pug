@@ -21,7 +21,7 @@ nav.header.md-header.light-solid(data-pages='header')
       .p-t-10.p-b-10.clearfix.m-b-5.hidden-xs.hidden-sm
         .pull-right.fs-12
           |{% for item in site.data.header.top-links %}
-          a.m-r-15.hint-text.link.text-black(href='{{ item.path }}') {{ item.name }}
+          a.m-r-15.hint-text.link.text-black(href='{{ item.path | relative_url }}') {{ item.name }}
           |{% endfor %}
           span.m-r-15.text-black.font-montserrat {{ site.data.header.cell-number }}
       ul.menu
